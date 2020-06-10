@@ -32,16 +32,6 @@ var temperature_chart = new Chart(ctx, {
                 fill: false,
                 yAxisID: "humidity"
             }, 
-
-            {
-                label: 'Soil Moisture',
-                data: [soil_moisture],
-                borderColor: [
-                    '#7fced4'
-                ],
-                fill: false,
-                yAxisID: "humidity"
-            }
         ]
     },
     
