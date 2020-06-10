@@ -29,9 +29,18 @@ var temperature_chart = new Chart(ctx, {
                 borderWidth: 3,
                 fill: false,
                 yAxisID: 'Humidity'
-    }]
+            }
+        ]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
     }
-
 })
 // var temperature_chart = new CharacterData(ctx, {
 //     type: 'line',
