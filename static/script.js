@@ -171,7 +171,7 @@ updated_data.done(function(results) {
     console.log(temperature);
     console.log(humidity);
     temperature_chart.data.datasets[0].data = temperature;
-    temperature_chart.data.datasets[1].data = humidty;
+    temperature_chart.data.datasets[1].data = humidity;
     temperature_chart.data.labels = x;
     temperature_chart.update();
 
