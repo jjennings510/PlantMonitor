@@ -6,42 +6,99 @@ console.log("initiated variables");
 var ctx = $("#temperature_chart");
 console.log("test");
 var temperature_chart = new Chart(ctx, {
+
     type: 'line',
     data: {
         labels: [],
-        datasets: [
+        datasets : [
             {
                 label: 'temperature',
                 data: [temperature],
                 borderColor: [
-                    '#060666'
+                    '#060666',
                 ],
                 borderWidth: 3,
                 fill: false,
-                yAxisID: 'Temperature'
+                yAxisID: "temperature"
             },
+            
+
             {
-                label: 'humidity',
+                label: 'Humidity',
                 data: [humidity],
                 borderColor: [
-                    '#219438'
+                    '#d6c73e'
                 ],
-                borderWidth: 3,
                 fill: false,
-                yAxisID: 'Humidity'
+                yAxisID: "humidity"
+            }, 
+
+            {
+                label: 'Soil Moisture',
+                data: [soil_moisture],
+                borderColor: [
+                    '#7fced4'
+                ],
+                fill: false,
+                yAxisID: "humidity"
             }
         ]
     },
+    
     options: {
-        scales: {
-            yAxes: [{
+        responsive: false,
+        scales:{
+            
+            xAxes: [ {
+                //type: 'time',
+                display: true,
+                scaleLabel : {
+                    display: true,
+                    labelString: 'Time (s)'
+                    
+                    },
                 ticks: {
-                    beginAtZero: true
+                   autoSkip: true,
+                   maxTicksLimit: 12
                 }
-            }]
-        }
+                }],
+            yAxes: [ {
+                id: "temperature",
+                display: true,
+                position: 'left',
+                ticks: {
+                    suggestedMin: 15,
+                    suggestedMax: 30
+                    },
+                scaleLabel : {
+                    display: true,
+
+                    labelString: 'Temperature (C)'
+                    
+                    }
+                },
+                {
+                id: "humidity",
+                display: true,
+                position: 'right',
+                ticks: {
+                    suggestedMin: 0,
+                    suggestedMax: 100
+                    },
+                scaleLabel : {
+                    display: true,
+
+                    labelString: 'Percentage Humidity'
+                    
+                    }                   
+                    
+                    
+                    }]
+            }
+
     }
-})
+
+});
 // var temperature_chart = new CharacterData(ctx, {
 //     type: 'line',
 //     data: {
