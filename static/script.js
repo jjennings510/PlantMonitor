@@ -22,7 +22,7 @@ var temperature_chart = new Chart(ctx, {
             },
             {
                 label: 'humidity',
-                data: [humidty],
+                data: [humidity],
                 borderColor: [
                     '#219438'
                 ],
