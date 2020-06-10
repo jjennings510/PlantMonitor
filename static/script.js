@@ -1,6 +1,11 @@
+var x = 0;
+var temperature = 0;
+var humidity = 0;
+console.log("initiated variables");
+
 var ctx = $("#temperature_chart");
 console.log("test");
-var temperature_chart = new CharacterData(ctx, {
+var temperature_chart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [],
