@@ -6,7 +6,7 @@ console.log("initiated variables");
 var ctx = $("#temperature_chart");
 console.log("test");
 var temperature_chart = new Chart(ctx, {
-    type: line,
+    type: 'line',
     data: {
         labels: [],
         datasets: [
