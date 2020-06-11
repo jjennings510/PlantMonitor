@@ -15,14 +15,14 @@ var temperature_chart = new Chart(ctx, {
         labels: [],
         datasets : [
             {
-                label: 'temperature',
+                label: 'Temperature',
                 data: [temperature],
                 borderColor: [
                     '#060666',
                 ],
                 borderWidth: 3,
                 fill: false,
-                yAxisID: "temperature"
+                yAxisID: "Temperature"
             },
             
 
@@ -33,7 +33,7 @@ var temperature_chart = new Chart(ctx, {
                     '#d6c73e'
                 ],
                 fill: false,
-                yAxisID: "humidity"
+                yAxisID: "Humidity"
             }, 
         ]
     },
@@ -43,7 +43,10 @@ var temperature_chart = new Chart(ctx, {
         scales:{
             
             xAxes: [ {
-                //type: 'time',
+                type: 'time',
+                time: {
+                    unit: 'minute'
+                },
                 display: true,
                 scaleLabel : {
                     display: true,
