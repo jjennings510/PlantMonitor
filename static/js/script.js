@@ -50,7 +50,7 @@ var temperature_chart = new Chart(ctx, {
                 display: true,
                 scaleLabel : {
                     display: true,
-                    labelString: 'Time (s)'
+                    labelString: 'Time of day'
                     
                     },
                 ticks: {
@@ -84,7 +84,7 @@ var temperature_chart = new Chart(ctx, {
                 scaleLabel : {
                     display: true,
 
-                    labelString: 'Percentage Humidity'
+                    labelString: 'Humidity Percentage'
                     
                     }                   
                     
