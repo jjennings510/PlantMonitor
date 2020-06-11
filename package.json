@@ -1,0 +1,20 @@
+{
+  "name": "PlantMonitor",
+  "version": "1.0.0",
+  "description": "\"# PlantMonitor\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjennings510/PlantMonitor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjennings510/PlantMonitor/issues"
+  },
+  "homepage": "https://github.com/jjennings510/PlantMonitor#readme"
+}

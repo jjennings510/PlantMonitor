@@ -13,7 +13,6 @@ time_ax = []
 
 def data_collection():
     while(1):
-        i = 0
         temp, hum = getData()
         time_read = datetime.now()
         q.put(temp)
