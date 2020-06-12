@@ -1,5 +1,6 @@
 // IP: 192.168.0.37
-// To run: python server.py
+// To connecto to RPi:  ssh -R 52698:localhost:52698 pi@192.168.0.37
+// To run: python3 server.py
 
 var x = 0;
 var temperature = 0;

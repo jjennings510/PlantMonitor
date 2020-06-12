@@ -11,9 +11,11 @@ def getData():
     else:
         print('Failed to get reading')
 
-    time.sleep(600) # Get reading every 10 minutes (leave on overnight to test)
+    # time.sleep(600) # Get reading every 10 minutes (leave on overnight to test)
     return temperature, humidity
         
         
-# getData()
+# TODO: probably sace these values into a csv, 
+# so those can then be plotted without relying 
+# on connection to internet
 
