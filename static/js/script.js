@@ -184,5 +184,4 @@ updated_data.done(function(results) {
     moisture_chart.data.datasets[1].data = moisture;
     moisture_chart.data.labels = x;
     moisture_chart.update();
-
 });
