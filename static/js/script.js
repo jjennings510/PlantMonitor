@@ -5,6 +5,8 @@
 var x = 0;
 var temperature = 0;
 var humidity = 0;
+var moisture = 0;
+var light = 0;
 console.log("initiated variables");
 
 var ctx = $("#temperature_chart");
@@ -36,6 +38,24 @@ var temperature_chart = new Chart(ctx, {
                 fill: false,
                 yAxisID: "humidity"
             }, 
+            {
+                label: 'Soil Moisture',
+                data: [moisture],
+                borderColor: [
+                    '#823abc'
+                ],
+                fill: false,
+                yAxisID: "moisture"
+            },
+            {
+                label: "Light Intesity",
+                data: [light],
+                borderColor: [
+                    "#372a73"
+                ],
+                fill: false,
+                yAxisID: "light"
+            }
         ]
     },
     
@@ -44,15 +64,10 @@ var temperature_chart = new Chart(ctx, {
         scales:{
             
             xAxes: [ {
-                // type: 'time',
-                // time: {
-                //     unit: 'minute'
-                // },
                 display: true,
                 scaleLabel : {
                     display: true,
                     labelString: 'Time of day'
-                    
                     },
                 ticks: {
                    autoSkip: true,
@@ -69,9 +84,7 @@ var temperature_chart = new Chart(ctx, {
                     },
                 scaleLabel : {
                     display: true,
-
                     labelString: 'Temperature (C)'
-                    
                     }
                 },
                 {
@@ -84,13 +97,35 @@ var temperature_chart = new Chart(ctx, {
                     },
                 scaleLabel : {
                     display: true,
-
                     labelString: 'Humidity Percentage'
-                    
-                    }                   
-                    
-                    
-                    }]
+                    }
+                },
+                {
+                    id: "moisture",
+                    display: true,
+                    position: 'right',
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Soil Moisture Percentage'
+                    }
+                },
+                {
+                    id: "light",
+                    display: true,
+                    position: 'left',
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 1000
+                    },
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Light Intensity'
+                    }
+                }]
             }
 
     }
